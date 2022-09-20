@@ -1,0 +1,102 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin:0;
+}
+
+.header{
+    margin: 2rem 0 1rem 0 
+}
+
+.breakdown{
+    margin-left: 1rem;
+}
+
+.incomeStatement{
+    display: grid;
+    grid-template-areas: 
+    "header header"
+    "revenue revenueNum"
+    "cogs cogsNum"
+    "rawMat rawMatNum"
+    "freight freightNum"
+    "storage storageNum"
+    "grossProfit grossProfitNum"
+    "otherOpCosts otherOpCostsNum"
+    "indirectLabor indirectLaborNum"
+    "legal legalNum"
+    "officeEquip officeEquipNum"
+    "opProfit opProfitNum";
+    justify-content: center;
+}
+
+.header{
+    grid-area: header;
+} 
+
+.revenue{
+    grid-area: revenue;
+}  
+.revenueNum{
+    grid-area: revenueNum;
+} 
+.cogs{
+    grid-area: cogs;
+} 
+.cogsNum{
+    grid-area: cogsNum;
+} 
+.rawMat{
+    grid-area: rawMat;
+}  
+.rawMatNum{
+    grid-area: rawMatNum;
+} 
+.freight{
+    grid-area: freight;
+}  
+.freightNum{
+    grid-area: freightNum;
+} 
+.storage{
+    grid-area: storage;
+} 
+.storageNum{
+    grid-area: storageNum;
+} 
+.grossProfit{
+    grid-area: grossProfit;
+} 
+.grossProfitNum{
+    grid-area: grossProfitNum;
+} 
+.otherOpCosts{
+    grid-area: otherOpCosts;
+} 
+.otherOpCostsNum{
+    grid-area: otherOpCostsNum;
+} 
+.indirectLabor{
+    grid-area: indirectLabor;
+} 
+.indirectLaborNum{
+    grid-area: indirectLaborNum;
+} 
+.legal{
+    grid-area: legal;
+} 
+.legalNum{
+    grid-area: legalNum;
+} 
+.officeEquip{
+    grid-area: officeEquip;
+} 
+.officeEquipNum{
+    grid-area: officeEquipNum;
+} 
+.opProfit{
+    grid-area: opProfit;
+} 
+.opProfitNum{
+    grid-area: opProfitNum;
+} 
