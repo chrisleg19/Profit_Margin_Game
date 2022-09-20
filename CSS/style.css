@@ -20,6 +20,7 @@
     "cogs cogsNum"
     "rawMat rawMatNum"
     "freight freightNum"
+    "factoryLabor factoryLaborNum"
     "storage storageNum"
     "grossProfit grossProfitNum"
     "otherOpCosts otherOpCostsNum"
@@ -58,6 +59,13 @@
 .freightNum{
     grid-area: freightNum;
 } 
+.factoryLabor{
+    grid-area: factoryLabor;
+}
+.factoryLaborNum{
+    grid-area: factoryLaborNum;
+}
+
 .storage{
     grid-area: storage;
 } 
@@ -100,3 +108,18 @@
 .opProfitNum{
     grid-area: opProfitNum;
 } 
+
+.score{
+    display: grid;
+    grid-template-areas:
+    "opm opmNum";
+    justify-content: space-evenly;
+    margin: 1rem 0 1rem 0
+}
+
+.opm{
+    grid-area: opm;
+}
+.opmNum{
+    grid-area: opmNum;
+}
