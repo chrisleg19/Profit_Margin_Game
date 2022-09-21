@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./CSS/style.css">
-    <script src="./JS/script2.js" defer></script>
+    <script src="./JS/script3.js" defer></script>
     <title>Operating Profit Margin Game</title>
 
     
@@ -55,6 +55,27 @@
     <h3 class="opm">Operating Profit Margin</h3>
     <p class="opmNum">0</p>
 </div>
+
+<form class="scenario1">
+    <fieldset>
+        <legend>Inventory shrinkage due to poor management.</legend>
+        <div>
+    <input type="radio" name="issue1" id="issue1A" value="1A">
+    <label for="issue1A">Increase cycle count frequency</label>
+    <input type="radio" name="issue1" id="issue1B" value="1B">
+    <label for="issue1B">Upgrade inventory management system</label>
+    <input type="radio" name="issue1" id="issue1C" value="1C">
+    <label for="issue1C">Outsource inventory management</label>        
+        </div>
+        <div>
+            <button type="submit">Submit</button>
+            <button type = "reset" id="clear1">Clear</button>
+        </div>
+    </fieldset>    
+</form>
+<!-- <h4 class="scenario">1. Inventory loss due to poor inventory management</h4>
+<input type="radio" id="oneA" name="scenario1" value="1A">
+<label for="oneA">Increase cycle count frequency</label> -->
     
 </body>
 </html>
