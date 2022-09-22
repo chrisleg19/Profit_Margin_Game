@@ -14,6 +14,7 @@ let officeEquip = document.querySelector(".officeEquipNum")
 let opProfit = document.querySelector(".opProfitNum")
 let opm = document.querySelector(".opmNum")
 let statementStart
+let statementOne
 let statementTwo
 let statementThree
 let statementFour
@@ -21,7 +22,7 @@ let clear1 = document.querySelector("#clear1")
 const scenario1 = document.querySelector(".scenario1")
 
 //prototype class
-class incomeStatement{
+class masterIncomeStatement{
     constructor(
     revenue,
     cogs,
@@ -91,29 +92,80 @@ show(statement){
 
     opm.textContent = statement.opm
     }
+}
 
+class masterIncomeStatement2 extends masterIncomeStatement {
+    constructor(
+        revenue,
+        cogs,
+        rawMat, 
+        freight,
+        factoryLabor,
+        storage,
+        grossProfit,
+        otherOpCosts,
+        indirectLabor,
+        legal,
+        officeEquip,
+        opProfit,
+        opm
+        ){
+            super(
+                revenue,
+                cogs,
+                rawMat, 
+                freight,
+                factoryLabor,
+                storage,
+                grossProfit,
+                otherOpCosts,
+                indirectLabor,
+                legal,
+                officeEquip,
+                opProfit,
+                opm   
+            );
+        this.revenue = revenue;
+        this.cogs = cogs;
+        this.rawMat = rawMat;
+        this.freight = freight;
+        this.factoryLabor = factoryLabor;
+        this.storage = storage;
+        this.grossProfit = grossProfit;
+        this.otherOpCosts = otherOpCosts;
+        this.indirectLabor = indirectLabor;
+        this.legal = legal;
+        this.officeEquip = officeEquip;
+        this.opProfit = opProfit;
+        this.opm = opm;
+        }
+
+}
+
+
+
+
+    
 //function to set current statement values to the next scenario income statement
 
-setStatementValues(statement){
-    statement.revenue = revenue;
-    this.cogs = cogs;
-    this.rawMat = rawMat;
-    this.freight = freight;
-    this.factoryLabor = factoryLabor;
-    this.storage = storage;
-    this.grossProfit = grossProfit;
-    this.otherOpCosts = otherOpCosts;
-    this.indirectLabor = indirectLabor;
-    this.legal = legal;
-    this.officeEquip = officeEquip;
-    this.opProfit = opProfit;
-    this.opm = opm;
-}
+// setStatementValues(statement){
+//     // statement.revenue = revenue;
+//     // this.cogs = cogs;
+//     // this.rawMat = rawMat;
+//     // this.freight = freight;
+//     // this.factoryLabor = factoryLabor;
+//     // this.storage = storage;
+//     // this.grossProfit = grossProfit;
+//     // this.otherOpCosts = otherOpCosts;
+//     // this.indirectLabor = indirectLabor;
+//     // this.legal = legal;
+//     // this.officeEquip = officeEquip;
+//     // this.opProfit = opProfit;
+//     // this.opm = opm;
+// }
 
 
-}
-
-statementStart = new incomeStatement(
+statementStart = new masterIncomeStatement(
     510000,
     null,
     30000,
@@ -129,7 +181,7 @@ statementStart = new incomeStatement(
     null
 )
 
-statementOne = new incomeStatement(
+statementOne = new masterIncomeStatement(
     510000, 
     null,
     30000,
@@ -145,7 +197,7 @@ statementOne = new incomeStatement(
     null 
 )
 
-statementTwo = new incomeStatement(
+statementTwo = new masterIncomeStatement(
     510000, 
     null,
     30000,
@@ -161,7 +213,7 @@ statementTwo = new incomeStatement(
     null
 )
 
-statementThree = new incomeStatement(
+statementThree = new masterIncomeStatement(
     510000, 
     null,
     30000,
@@ -199,8 +251,6 @@ scenario1.addEventListener("submit", (e)=>{
         } else if (scenario1.issue1.value === "1C"){
             console.log(scenario1.issue1.value)
             statementThree.show(statementThree)
-           
-            
         } 
 })
 
