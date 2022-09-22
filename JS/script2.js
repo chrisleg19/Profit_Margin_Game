@@ -136,7 +136,7 @@ opm.textContent = st.opm
 
 }
 
-oneA(statement1)
+// oneA(statement1)
 
 
 
