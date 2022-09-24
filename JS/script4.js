@@ -45,7 +45,7 @@ let arr1 = []
 let arr2 = []
 let arr3 = []
 let arr4 = []
-let scenario2AArr = []
+// let scenario2AArr = []
 
 //prototype class
 class masterIncomeStatement{
