@@ -234,6 +234,7 @@ statementFourteen = arr3
 
 statementFifteen = arr3
 
+// statementSixteen = arr4
 statementSixteen = new masterIncomeStatement(
     revenue,
     cogs,
@@ -258,7 +259,6 @@ scenario1.addEventListener("submit", (e)=>{
         if (scenario1.issue1.value === "1A"){
             console.log(scenario1.issue1.value)
             console.log(statementOne)
-            statementOne.show(statementOne)
             arr1.push(statementOne)
             statementFour.revenue = arr1[0].revenue
             statementFour.cogs = arr1[0].cogs
@@ -273,13 +273,13 @@ scenario1.addEventListener("submit", (e)=>{
             statementFour.officeEquip = arr1[0].officeEquip
             statementFour.opProfit = arr1[0].opProfit
             statementFour.opm = arr1[0].opm
-
+            
             console.log(statementFour)
             console.log(arr1)
+            statementOne.show(statementOne)
             
         } else if(scenario1.issue1.value === "1B"){
             console.log(scenario1.issue1.value)
-            statementTwo.show(statementTwo)
             console.log(statementTwo)
             arr1.push(statementTwo)
             statementFour.revenue = arr1[0].revenue
@@ -295,13 +295,13 @@ scenario1.addEventListener("submit", (e)=>{
             statementFour.officeEquip = arr1[0].officeEquip
             statementFour.opProfit = arr1[0].opProfit
             statementFour.opm = arr1[0].opm
-
+            
             console.log(statementFour)
             console.log(arr1)
-
+            statementTwo.show(statementTwo)
+            
         } else if (scenario1.issue1.value === "1C"){
             console.log(scenario1.issue1.value)
-            statementThree.show(statementThree)
             //push results from answer to array and then assign results to object for next scenario
             console.log(statementThree)
             arr1.push(statementThree)
@@ -318,12 +318,13 @@ scenario1.addEventListener("submit", (e)=>{
             statementFour.officeEquip = arr1[0].officeEquip
             statementFour.opProfit = arr1[0].opProfit
             statementFour.opm = arr1[0].opm
-
+            
             console.log(statementFour)
             console.log(arr1)
-
+            
+            statementThree.show(statementThree)
         } 
-})
+    })
 
 clear1.addEventListener("click", ()=>{
     statementStart.show(statementStart)
@@ -542,11 +543,12 @@ scenario3.addEventListener("submit", (e)=>{
         statementTwelve.officeEquip = arr3[0].officeEquip
         statementTwelve.opProfit = arr3[0].opProfit
         statementTwelve.opm = arr3[0].opm
-    
+        
         // console.log(statementTwelve)
         // console.log(arr3)
-
+        
         statementNine[0].show(statementNine[0])        // adding show function at the end of 3A     
+        
         
     } else if(scenario3.issue3.value === "3B"){
         console.log(scenario3.issue3.value)
@@ -640,9 +642,10 @@ next3.addEventListener("click", (e)=>{
 
 scenario4.addEventListener("submit", (e)=>{
     e.preventDefault()
-
+    
     if(scenario4.issue4.value === "4A"){
-    console.log(scenario4.issue4.value)
+        console.log(scenario4.issue4.value)
+        console.log(statementSixteen)
 
     let decrease = statementThirteen[0].factoryLabor *.10
 
@@ -653,6 +656,9 @@ scenario4.addEventListener("submit", (e)=>{
     statementThirteen[0].indirectLabor = statementThirteen[0].indirectLabor + increase
 
     arr4.push(statementThirteen[0])
+    console.log(arr4[0])
+    console.log(arr4)
+    console.log(statementSixteen)
     statementSixteen.revenue = arr4[0].revenue
     statementSixteen.cogs = arr4[0].cogs
     statementSixteen.rawMat = arr4[0].rawMat
@@ -667,9 +673,10 @@ scenario4.addEventListener("submit", (e)=>{
     statementSixteen.opProfit = arr4[0].opProfit
     statementSixteen.opm = arr4[0].opm
 
+    console.log(statementSixteen)
     statementThirteen[0].show(statementThirteen[0])
 
-    console.log(statementThirteen[0])
+
 
     } else if (scenario4.issue4.value === "4B"){
         console.log(scenario4.issue4.value)
@@ -693,7 +700,10 @@ scenario4.addEventListener("submit", (e)=>{
     statementSixteen.opProfit = arr4[0].opProfit
     statementSixteen.opm = arr4[0].opm
 
-    statementFourteen[0].show(statementFourteen[0])    
+    statementFourteen[0].show(statementFourteen[0])  
+    
+    console.log(statementSixteen)
+    console.log(arr4)
 
     }else if (scenario4.issue4.value === "4C"){
         console.log(scenario4.issue4.value)
@@ -722,6 +732,8 @@ scenario4.addEventListener("submit", (e)=>{
     statementSixteen.opm = arr4[0].opm
 
     statementFifteen[0].show(statementFifteen[0])
+
+
     }
 })
 
@@ -729,6 +741,25 @@ clear4.addEventListener("click", ()=>{
     statementTwelve.show(statementTwelve)
     arr4 = arr3
 })
+
+finish.addEventListener("click", (e)=>{
+    e.preventDefault()
+    statementSixteen.show(statementSixteen)
+    console.log(statementSixteen)
+
+    // console.log(statementThirteen[0])
+    // console.log(statementSixteen)
+    // console.log(arr4[0])
+    // console.log(statementStart)
+
+    if (statementSixteen.opm > statementStart.opm){
+        console.log("you win!")
+    } else {
+        console.log("you lose!")
+    }
+})
+
+
 
 //COMPLETE THE FINISH BUTTON 
 //SHOW WIN STATE
