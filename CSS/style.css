@@ -113,13 +113,15 @@
     display: grid;
     grid-template-areas:
     "opm opmNum";
-    justify-content: space-evenly;
+    justify-content: center;
     margin: 1rem 0 1rem 0
 }
 
 .opm{
     grid-area: opm;
+    margin-right: 3rem;
 }
 .opmNum{
     grid-area: opmNum;
+    margin-right: 2rem;
 }

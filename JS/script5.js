@@ -12,6 +12,7 @@ let legal = document.querySelector(".legalNum")
 let officeEquip = document.querySelector(".officeEquipNum")
 let opProfit = document.querySelector(".opProfitNum")
 let opm = document.querySelector(".opmNum")
+let results = document.querySelector(".results")
 let statementStart
 let statementOne
 let statementTwo
@@ -41,6 +42,18 @@ const scenario1 = document.querySelector(".scenario1")
 const scenario2 = document.querySelector(".scenario2")
 const scenario3 = document.querySelector(".scenario3")
 const scenario4 = document.querySelector(".scenario4")
+const radio1A = document.querySelector("#issue1A")
+const radio1B = document.querySelector("#issue2A")
+const radio1C = document.querySelector("#issue3A")
+const radio2A = document.querySelector("#issue2A")
+const radio2B = document.querySelector("#issue2B")
+const radio2C = document.querySelector("#issue2C")
+const radio3A = document.querySelector("#issue3A")
+const radio3B = document.querySelector("#issue3B")
+const radio3C = document.querySelector("#issue3C")
+const radio4A = document.querySelector("#issue4A")
+const radio4B = document.querySelector("#issue4B")
+const radio4C = document.querySelector("#issue4C")
 let arr1 = []
 let arr2 = []
 let arr3 = []
@@ -78,26 +91,26 @@ class masterIncomeStatement{
     this.opm = opm;
     }
     //function to execute Bold income statement math and display numbers
-show(statement){
-    revenue.textContent = statement.revenue
-    statement.cogs = statement.rawMat + statement.freight + statement.factoryLabor + statement.storage
-    cogs.textContent = statement.cogs
-    rawMat.textContent = statement.rawMat
-    freight.textContent = statement.freight
-    factoryLabor.textContent = statement.factoryLabor
-    storage.textContent = statement.storage
-    statement.grossProfit = statement.revenue - statement.cogs
-    grossProfit.textContent = statement.grossProfit
-    statement.otherOpCosts = statement.indirectLabor + statement.legal + statement.officeEquip
-    otherOpCosts.textContent = statement.otherOpCosts
-    indirectLabor.textContent = statement.indirectLabor
-    legal.textContent = statement.legal
-    officeEquip.textContent = statement.officeEquip  
-    statement.opProfit = statement.grossProfit - statement.otherOpCosts
-    opProfit.textContent = statement.opProfit
-    statement.opm = (statement.opProfit / statement.revenue) *100
-    opm.textContent = statement.opm
-}
+    show(statement){
+        revenue.textContent = "$" + statement.revenue
+        statement.cogs = statement.rawMat + statement.freight + statement.factoryLabor + statement.storage
+        cogs.textContent = "$" + statement.cogs
+        rawMat.textContent = "$" + statement.rawMat
+        freight.textContent = "$" + statement.freight
+        factoryLabor.textContent = "$" + statement.factoryLabor
+        storage.textContent = "$" + statement.storage
+        statement.grossProfit = statement.revenue - statement.cogs
+        grossProfit.textContent = "$" + statement.grossProfit
+        statement.otherOpCosts = statement.indirectLabor + statement.legal + statement.officeEquip
+        otherOpCosts.textContent = "$" + statement.otherOpCosts
+        indirectLabor.textContent = "$" + statement.indirectLabor
+        legal.textContent = "$" + statement.legal
+        officeEquip.textContent = "$" + statement.officeEquip  
+        statement.opProfit = statement.grossProfit - statement.otherOpCosts
+        opProfit.textContent = "$" + statement.opProfit
+        statement.opm = (statement.opProfit / statement.revenue) *100
+        opm.textContent = statement.opm.toFixed(2) + "%"
+    }
 }
 
 //starting class/object with figures given plus the first 3 outcome objects with figures given for each scenario
@@ -290,6 +303,7 @@ scenario1.addEventListener("submit", (e)=>{
             statementFour.opm = arr1[0].opm
             
             statementOne.show(statementOne)
+
             
         } else if(scenario1.issue1.value === "1B"){
             arr1.push(statementTwo)
@@ -338,15 +352,22 @@ scenario1.addEventListener("submit", (e)=>{
     //Next button displays the object/array used to store the answer selected in scenario 1
     next1.addEventListener("click", ()=>{
         statementFour.show(statementFour)
+        console.log(statementThree)
+        console.log(statementFour)
     })
 
     //Scenario 2 SUBMIT button event listener with if statements based on the answer selected.  Each block pushes the answer chosen to an array then displays income statement based on decision made 
     scenario2.addEventListener("submit", (e)=>{
         e.preventDefault()
         if (scenario2.issue2.value === "2A"){
-            // calculation applied to decision            
+            // calculation applied to decision 
+                
+            console.log(statementFour)
+            console.log(statementFive)  
+           
             let increase = statementFive[0].rawMat * .20
             statementFive[0].rawMat = increase + statementFive[0].rawMat
+            
             
             arr2.push(statementFive[0])
             statementEight.revenue = arr2[0].revenue
@@ -364,9 +385,14 @@ scenario1.addEventListener("submit", (e)=>{
             statementEight.opm = arr2[0].opm
             
             statementFive[0].show(statementFive[0])
+
+            console.log(statementFour)
+            console.log(statementFive)
             
         } else if(scenario2.issue2.value === "2B"){
             // calculation applied to decision 
+            console.log(statementFour)
+            console.log(statementSix)
             let decrease = statementSix[0].storage * .10
             statementSix[0].storage = statementSix[0].storage - decrease 
             
@@ -414,6 +440,9 @@ scenario1.addEventListener("submit", (e)=>{
     clear2.addEventListener("click", ()=>{
         statementFour.show(statementFour)
         arr2 = arr1
+        console.log(arr2)
+        console.log(statementFour)
+        console.log(statementFive)
     })
     
     next2.addEventListener("click", (e)=>{
@@ -584,12 +613,29 @@ scenario1.addEventListener("submit", (e)=>{
     finish.addEventListener("click", (e)=>{
         e.preventDefault()
         statementSixteen.show(statementSixteen)
+        console.log(statementStart)
+        console.log(statementFour)
+        console.log(statementEight)
+        console.log(statementTwelve)
+        console.log(statementSixteen)
         
         //If statement to determine win/loss state
         if (statementSixteen.opm > statementStart.opm){
+            results.innerHTML = "<h2>Congratulations, your operating margin is higher! You will receive a $10,000 bonus.</h2>"
             console.log("you win!")
+            console.log(statementStart)
+            console.log(statementFour)
+            console.log(statementEight)
+            console.log(statementTwelve)
+            console.log(statementSixteen)
         } else {
+            results.innerHTML = "<h2>Sorry, due to poor performance the operating margin is lower than 11.76%, therefore your employment is hereby terminated.  Report to HR immediately.</h2>"
             console.log("you lose!")
+            console.log(statementStart)
+            console.log(statementFour)
+            console.log(statementEight)
+            console.log(statementTwelve)
+            console.log(statementSixteen)
         }
     })
 
