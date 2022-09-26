@@ -125,3 +125,32 @@
     grid-area: opmNum;
     margin-right: 2rem;
 }
+
+.scenario1{
+    display: flex;
+    margin-left: 1rem;
+    margin-bottom: 2rem;
+}
+
+.scenario2{
+    display: flex;
+    margin-left: 1rem;
+    margin-bottom: 2rem;
+}
+
+.scenario3{
+    display: flex;
+    margin-left: 1rem;
+    margin-bottom: 2rem;
+}
+
+.scenario4{
+    display: flex;
+    margin-left: 1rem;
+    margin-bottom: 2rem;
+}
+
+.firstSetA{
+    margin-right: 1rem;
+}
+
