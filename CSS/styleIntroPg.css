@@ -1,0 +1,71 @@
+/* Intro page */
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin:0;
+}
+
+
+body{
+    display: flex;
+    justify-content: center;
+    max-height: 100vh;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    max-width: 600px;
+
+}
+
+.titleBox{
+    display: flex;
+    justify-content: center;
+    margin-top: .5rem;
+}
+
+.welcomeBox{
+    display: flex;
+    justify-content: center;
+    margin-top: .5rem;
+    margin-bottom: .5rem;
+}
+
+.refresherBox{
+    display: flex;
+    justify-content: center;
+    margin-top: .5rem;
+    margin-bottom: .5rem;
+}
+
+.videoBox{
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.video{
+    border-radius: 20px;
+    box-shadow: 1rem 1rem 1rem ;
+}
+
+.buttonBox{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+button{
+    width: 20rem;
+    height: 5rem;
+    font-size: 2rem;    
+    font-weight: bolder;
+    margin-top: 1rem;
+    padding: none;
+    border-radius: 20px;
+    box-shadow: .5rem .5rem .5rem black;
+    color: white;
+    background-color: green;
+}
+/*End of Intro Page */
