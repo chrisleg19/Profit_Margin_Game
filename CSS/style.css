@@ -135,11 +135,39 @@
     margin-right: 2rem;
 }
 
+.bottom{
+    display: flex;
+   flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
 .scenario1{
     display: flex;
     margin-left: 1rem;
     margin-bottom: 1rem;
 }
+
+fieldset{
+    display:flex;
+    flex-direction: column;
+    list-style: none;
+    width: 450px;
+}
+
+.options{
+display: inline-block;
+    list-style: none;
+}
+
+.firstSet{
+float: left;
+}
+.firstSetA{
+    display: block;
+}
+
+
 
 .scenario2{
     display: flex;

@@ -12,8 +12,8 @@
 </head>
 <body>
     <ul class="menu">
-        <li class="tab tab1">Intro</li>
-        <li class="tab tab2">Game</li>
+        <a href="./indexIntro.html"><li class="tab tab1">Intro</li></a>
+        <a href="./index.html"><li class="tab tab2">Game</li></a>
         <li class="tab tab3">Q1</li>
         <li class="tab tab4">Q2</li>
         <li class="tab tab5">Q3</li>
@@ -65,11 +65,11 @@
     <h3 class="opm">Operating Profit Margin</h3>
     <p class="opmNum">0</p>
 </div>
-
+<div class="bottom">
 <form class="scenario1">
     <fieldset>
         <legend>Inventory shrinkage due to poor management.</legend>
-        <div>
+        <div class="options">
     <input type="radio" name="issue1" id="issue1A" value="1A" class="firstSet">
     <label for="issue1A" class="firstSetA">Increase cycle count frequency</label>
     <input type="radio" name="issue1" id="issue1B" value="1B" class="firstSet">
@@ -89,11 +89,11 @@
     <fieldset>
         <legend>Supplier increases cost of raw materials.</legend>
         <div>
-    <input type="radio" name="issue2" id="issue2A" value="2A">
+    <input type="radio" name="issue2" id="issue2A" value="2A" class="firstSet">
     <label for="issue2A" class="firstSetA">Find a new supplier</label>
-    <input type="radio" name="issue2" id="issue2B" value="2B">
+    <input type="radio" name="issue2" id="issue2B" value="2B" class="firstSet">
     <label for="issue2B" class="firstSetA">Negotiate with supplier for new EOQ and release option</label>
-    <input type="radio" name="issue2" id="issue2C" value="2C">
+    <input type="radio" name="issue2" id="issue2C" value="2C" class="firstSet">
     <label for="issue2C" class="firstSetA">Negotiate material costs to include freight</label>        
         </div>
         <div>
@@ -108,11 +108,11 @@
     <fieldset>
         <legend>Freight costs rise due to increase in fuel price.</legend>
         <div>
-    <input type="radio" name="issue3" id="issue3A" value="3A">
+    <input type="radio" name="issue3" id="issue3A" value="3A" class="firstSet">
     <label for="issue3A" class="firstSetA">Negotiate material costs to include freight</label>
-    <input type="radio" name="issue3" id="issue3B" value="3B">
+    <input type="radio" name="issue3" id="issue3B" value="3B" class="firstSet">
     <label for="issue3B" class="firstSetA">Invest in company owned truck and driver</label>
-    <input type="radio" name="issue3" id="issue3C" value="3C">
+    <input type="radio" name="issue3" id="issue3C" value="3C" class="firstSet">
     <label for="issue3C" class="firstSetA">Hire someone to broker your freight</label>        
         </div>
         <div>
@@ -127,11 +127,11 @@
     <fieldset>
         <legend>Employees' quality of work decrease, causing an increase in rework.</legend>
         <div>
-    <input type="radio" name="issue4" id="issue4A" value="4A">
+    <input type="radio" name="issue4" id="issue4A" value="4A" class="firstSet">
     <label for="issue4A" class="firstSetA">Improve employee standard work/training</label>
-    <input type="radio" name="issue4" id="issue4B" value="4B">
+    <input type="radio" name="issue4" id="issue4B" value="4B" class="firstSet">
     <label for="issue4B" class="firstSetA">Find higher skilled workers</label>
-    <input type="radio" name="issue4" id="issue4C" value="4C">
+    <input type="radio" name="issue4" id="issue4C" value="4C" class="firstSet">
     <label for="issue4C" class="firstSetA">Hire quality control personnel</label>        
         </div>
         <div>
@@ -141,6 +141,7 @@
         </div>
     </fieldset>    
 </form>
+</div>
     <div class="results"></div>
 </body>
 </html>

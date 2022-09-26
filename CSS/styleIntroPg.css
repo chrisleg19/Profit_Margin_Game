@@ -9,8 +9,23 @@
 body{
     display: flex;
     justify-content: center;
+    flex-direction: column;
+    align-items: center;
     max-height: 100vh;
 }
+.menu{
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    margin-top: .5rem;
+    font-weight: bold;
+}
+
+li{
+    margin-left: 4rem;
+    margin-right: 4rem;
+}
+
 .container{
     display: flex;
     flex-direction: column;
@@ -46,6 +61,7 @@ body{
 }
 
 .video{
+    height: 18rem;
     border-radius: 20px;
     box-shadow: 1rem 1rem 1rem ;
 }
@@ -58,7 +74,7 @@ body{
 
 button{
     width: 20rem;
-    height: 5rem;
+    height: 4rem;
     font-size: 2rem;    
     font-weight: bolder;
     margin-top: 1rem;
