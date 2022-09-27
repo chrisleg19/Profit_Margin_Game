@@ -4,6 +4,10 @@
     margin:0;
 }
 
+body{
+    width: 100%;
+    height: auto;
+}
 .menu{
     display: flex;
     justify-content: space-evenly;
@@ -12,9 +16,28 @@
     font-weight: bold;
 }
 
+.menu  a{
+    text-decoration: none;
+}
+
+.menu a:visited{
+    color: black;
+}
+
+.menu a:link{
+    color: black;
+}
+
+.menu li{
+    border: 2px solid black;
+    padding: 0 2rem 0 2rem;
+    background-color: rgb(243, 240, 237);
+    border-radius: 10px;
+    box-shadow: .5rem .5rem .5rem black;
+}
 
 .header{
-    margin: 2rem 0 1rem 0 
+    margin: 1rem 0 .5rem 0 
 }
 
 .breakdown{
@@ -38,6 +61,21 @@
     "officeEquip officeEquipNum"
     "opProfit opProfitNum";
     justify-content: center;
+    
+    
+}
+
+.wrapper{
+    border: 2px solid black;
+    height: 310px;
+    margin-top: 8px;
+    width: 500px;
+    margin:15px auto;
+    border-radius: 10px;
+    box-shadow: .5rem .5rem .5rem black;
+;
+    
+    
 }
 
 .header{
@@ -123,7 +161,7 @@
     grid-template-areas:
     "opm opmNum";
     justify-content: center;
-    margin: 1rem 0 1rem 0
+    margin: .5rem 0 .5rem 0
 }
 
 .opm{
@@ -133,11 +171,13 @@
 .opmNum{
     grid-area: opmNum;
     margin-right: 2rem;
+    margin-bottom: none;
 }
 
 .bottom{
     display: flex;
-   flex-direction: column;
+    flex-wrap: wrap;
+   /* flex-direction: column; */
     justify-content: center;
     align-items: center;
 }
@@ -152,7 +192,10 @@ fieldset{
     display:flex;
     flex-direction: column;
     list-style: none;
-    width: 450px;
+    width: 500px;
+    line-height: 2rem;
+    box-shadow: .5rem .5rem .5rem black;
+    margin-top: none;
 }
 
 .options{
@@ -162,6 +205,10 @@ display: inline-block;
 
 .firstSet{
 float: left;
+margin-top: .65rem;
+margin-right: .25rem;
+margin-left: .5rem;
+
 }
 .firstSetA{
     display: block;
@@ -191,3 +238,34 @@ float: left;
     margin-right: 1rem;
 }
 
+legend{
+    font-weight: bolder;
+}
+
+.reset{
+    display: flex;
+    justify-content: center;
+}
+
+.reset > button{
+    padding:0 1rem  0 1rem;
+    font-size: 1rem;
+    font-weight: bold;
+    background-color: red;
+    color: white;
+    border-radius: 10px;
+    box-shadow: .5rem .5rem .5rem black;
+}
+
+.scenarioBtns{
+    display: flex;
+    justify-content: space-around;
+    margin-top: .25rem;
+    margin-bottom: .25rem;
+}
+
+.scenarioBtns > button{
+    font-size: .75rem;
+    font-weight: bold;
+    padding: 0 .5rem 0 .5rem;
+}

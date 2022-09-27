@@ -58,6 +58,7 @@ let arr1 = []
 let arr2 = []
 let arr3 = []
 let arr4 = []
+let resetBtn = document.querySelector("#resetBtn")
 
 //prototype class
 class masterIncomeStatement{
@@ -621,7 +622,8 @@ scenario1.addEventListener("submit", (e)=>{
         
         //If statement to determine win/loss state
         if (statementSixteen.opm > statementStart.opm){
-            results.innerHTML = "<h2>Congratulations, your operating margin is higher! You will receive a $10,000 bonus.</h2>"
+            // results.innerHTML = "<h2>Congratulations, your operating margin is higher! You will receive a $10,000 bonus.</h2>"
+            alert("Congratulations, your operating margin is higher! You will receive a $10,000 bonus.")
             console.log("you win!")
             console.log(statementStart)
             console.log(statementFour)
@@ -629,7 +631,8 @@ scenario1.addEventListener("submit", (e)=>{
             console.log(statementTwelve)
             console.log(statementSixteen)
         } else {
-            results.innerHTML = "<h2>Sorry, due to poor performance the operating margin is lower than 11.76%, therefore your employment is hereby terminated.  Report to HR immediately.</h2>"
+            // results.innerHTML = "<h2>Sorry, due to poor performance the operating margin is lower than 11.76%, therefore your employment is hereby terminated.  Report to HR immediately.</h2>"
+            alert("Sorry, due to poor performance the operating margin is lower than 11.76%, therefore your employment is hereby terminated.  Report to HR immediately.")
             console.log("you lose!")
             console.log(statementStart)
             console.log(statementFour)
@@ -640,5 +643,8 @@ scenario1.addEventListener("submit", (e)=>{
     })
 
 
+    resetBtn.addEventListener("click", ()=>{
+        location.reload()
+    })
 
     //TO DO: PUT A LOOP SOMEWHERE IN EACH ANSWER SO THE CALCULATION IS ONLY DONE ONCE.  CALCULATION CONTINUES TO EXECUTE AND ACCUMULATE RESULTS EVERY TIME YOU SELECT ANSWERS WITHIN SCENARIO 2, 3, & 4.

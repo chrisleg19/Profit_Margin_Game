@@ -4,144 +4,40 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./CSS/style.css">
-    <script src="./JS/script5.js" defer></script>
-    <title>Operating Profit Margin Game</title>
-
-    
+    <link rel="stylesheet" href="./CSS/styleIntroPg.css">
+    <title>OPM Simulation Game</title>
 </head>
 <body>
     <ul class="menu">
-        <a href="./indexIntro.html"><li class="tab tab1">Intro</li></a>
-        <a href="./index.html"><li class="tab tab2">Game</li></a>
+        <a href="./index.html"><li class="tab tab1">Intro</li></a>
+        <a href="./Pages/indexGame.html"><li class="tab tab2">Game</li></a>
         <li class="tab tab3">Q1</li>
         <li class="tab tab4">Q2</li>
         <li class="tab tab5">Q3</li>
         <li class="tab tab6">Q4</li>
-        <li class="tab tab7">Results</li>
+        
     </ul>
 
-<div class="incomeStatement">
-        <h2 class="header">Widget Inc. Income Statement</h2>
-    
-            <h4 class="revenue">Revenue</h4>
-            <div class="revenueNum">0</div>
-  
-            <h4 class="cogs">COGS</h4>
-            <div class="cogsNum">0</div>
+    <div class="container">
+    <div class="titleBox">
+    <h1 class="opmTitle">OPM Simulation Game</h1>
+    </div>
 
-            <p class="rawMat breakdown">Raw Materials</p>
-            <div class="rawMatNum">0</div>
+    <div class="welcomeBox">
+    <h3 class="welcome">Hello and welcome to the OPM simulation game.  Here you will play the role of an Operations Manager for Widget Inc.  Your objective is to manage decisions throughout the year and reach an operating profit margin greater than the previous year.  If you succeed there will be a nice bonus waiting for you, but fail, and you'll have a "meeting" with HR.  Good Luck!
+    </h3>
+    </div>
 
-            <p class="freight breakdown">Freight</p>
-            <div class="freightNum">0</div>
-
-            <p class="factoryLabor breakdown">Factory Labor</p>
-            <div class="factoryLaborNum">0</div>
-
-            <p class="storage breakdown">Storage</p>
-            <div class="storageNum">0</div>
-
-            <h4 class="grossProfit">Gross Profit</h4>
-            <div class="grossProfitNum">0</div>
- 
-            <h4 class="otherOpCosts">Other Operating Costs</h4>
-            <div class="otherOpCostsNum">0</div>
-
-            <p class="indirectLabor breakdown">Indirect Labor</p>
-            <div class="indirectLaborNum">0</div>
-
-            <p class="legal breakdown">Legal</p>
-            <div class="legalNum">0</div>
-
-            <p class="officeEquip breakdown">Office Equipment</p>
-            <div class="officeEquipNum">0</div>
-
-            <h4 class="opProfit">Operating Profit</h4>
-            <div class="opProfitNum">0</div>
-           
+    <div class="refresherBox">
+    <h3 class="refresher">Before you begin, watch the video below to refresh yourself on how the operating profit margin is calculated and used.
+    </h3>
+    </div>
+    <div class="videoBox">
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/JWBTHyVTnfk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="video"></iframe>
+    </div>
+    <div class="buttonBox">
+    <a href="./Pages/indexGame.html"><button type="button">Begin</button></a>
+    </div>
 </div>
-<div class="score">
-    <h3 class="opm">Operating Profit Margin</h3>
-    <p class="opmNum">0</p>
-</div>
-<div class="bottom">
-<form class="scenario1">
-    <fieldset>
-        <legend>Inventory shrinkage due to poor management.</legend>
-        <div class="options">
-    <input type="radio" name="issue1" id="issue1A" value="1A" class="firstSet">
-    <label for="issue1A" class="firstSetA">Increase cycle count frequency</label>
-    <input type="radio" name="issue1" id="issue1B" value="1B" class="firstSet">
-    <label for="issue1B" class="firstSetA">Upgrade inventory management system</label>
-    <input type="radio" name="issue1" id="issue1C" value="1C" class="firstSet">
-    <label for="issue1C" class="firstSetA">Outsource inventory management</label>        
-        </div>
-        <div>
-            <button type="submit">Submit</button>
-            <button type = "reset" id="clear1">Clear</button>
-            <button id ="next1" type="button">Next</button>
-        </div>
-    </fieldset>    
-</form>
-
-<form class="scenario2">
-    <fieldset>
-        <legend>Supplier increases cost of raw materials.</legend>
-        <div>
-    <input type="radio" name="issue2" id="issue2A" value="2A" class="firstSet">
-    <label for="issue2A" class="firstSetA">Find a new supplier</label>
-    <input type="radio" name="issue2" id="issue2B" value="2B" class="firstSet">
-    <label for="issue2B" class="firstSetA">Negotiate with supplier for new EOQ and release option</label>
-    <input type="radio" name="issue2" id="issue2C" value="2C" class="firstSet">
-    <label for="issue2C" class="firstSetA">Negotiate material costs to include freight</label>        
-        </div>
-        <div>
-            <button type="submit">Submit</button>
-            <button type = "reset" id="clear2">Clear</button>
-            <button id = "next2">Next</button>
-        </div>
-    </fieldset>    
-</form>
-
-<form class="scenario3">
-    <fieldset>
-        <legend>Freight costs rise due to increase in fuel price.</legend>
-        <div>
-    <input type="radio" name="issue3" id="issue3A" value="3A" class="firstSet">
-    <label for="issue3A" class="firstSetA">Negotiate material costs to include freight</label>
-    <input type="radio" name="issue3" id="issue3B" value="3B" class="firstSet">
-    <label for="issue3B" class="firstSetA">Invest in company owned truck and driver</label>
-    <input type="radio" name="issue3" id="issue3C" value="3C" class="firstSet">
-    <label for="issue3C" class="firstSetA">Hire someone to broker your freight</label>        
-        </div>
-        <div>
-            <button type="submit">Submit</button>
-            <button type = "reset" id="clear3">Clear</button>
-            <button id = "next3">Next</button>
-        </div>
-    </fieldset>    
-</form>
-
-<form class="scenario4">
-    <fieldset>
-        <legend>Employees' quality of work decrease, causing an increase in rework.</legend>
-        <div>
-    <input type="radio" name="issue4" id="issue4A" value="4A" class="firstSet">
-    <label for="issue4A" class="firstSetA">Improve employee standard work/training</label>
-    <input type="radio" name="issue4" id="issue4B" value="4B" class="firstSet">
-    <label for="issue4B" class="firstSetA">Find higher skilled workers</label>
-    <input type="radio" name="issue4" id="issue4C" value="4C" class="firstSet">
-    <label for="issue4C" class="firstSetA">Hire quality control personnel</label>        
-        </div>
-        <div>
-            <button type="submit">Submit</button>
-            <button type = "reset" id="clear4">Clear</button>
-            <button id = "finish">Finish</button>
-        </div>
-    </fieldset>    
-</form>
-</div>
-    <div class="results"></div>
 </body>
 </html>
