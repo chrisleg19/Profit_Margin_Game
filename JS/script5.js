@@ -627,7 +627,7 @@ scenario1.addEventListener("submit", (e)=>{
         //If statement to determine win/loss state
         if (statementSixteen.opm > statementStart.opm){
             // results.innerHTML = "<h2>Congratulations, your operating margin is higher! You will receive a $10,000 bonus.</h2>"
-            alert("Congratulations, your operating margin is higher! You will receive a $10,000 bonus.")
+            alert("Congratulations, your operating margin is higher than 11.76%! You will receive a $10,000 bonus.")
             console.log("you win!")
             console.log(statementStart)
             console.log(statementFour)
