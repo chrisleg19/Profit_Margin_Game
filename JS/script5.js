@@ -59,6 +59,7 @@ let arr2 = []
 let arr3 = []
 let arr4 = []
 let resetBtn = document.querySelector("#resetBtn")
+let q1 = document.querySelector("#q1")
 
 //prototype class
 class masterIncomeStatement{
@@ -111,6 +112,9 @@ class masterIncomeStatement{
         opProfit.textContent = "$" + statement.opProfit
         statement.opm = (statement.opProfit / statement.revenue) *100
         opm.textContent = statement.opm.toFixed(2) + "%"
+    }
+    show2A(){
+        revenue2.textContent = 100
     }
 }
 
@@ -648,3 +652,5 @@ scenario1.addEventListener("submit", (e)=>{
     })
 
     //TO DO: PUT A LOOP SOMEWHERE IN EACH ANSWER SO THE CALCULATION IS ONLY DONE ONCE.  CALCULATION CONTINUES TO EXECUTE AND ACCUMULATE RESULTS EVERY TIME YOU SELECT ANSWERS WITHIN SCENARIO 2, 3, & 4.
+
+   
