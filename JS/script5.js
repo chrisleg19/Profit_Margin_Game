@@ -61,6 +61,7 @@ let arr4 = []
 let resetBtn = document.querySelector("#resetBtn")
 let q1 = document.querySelector("#q1")
 
+
 //prototype class
 class masterIncomeStatement{
     constructor(
@@ -113,9 +114,7 @@ class masterIncomeStatement{
         statement.opm = (statement.opProfit / statement.revenue) *100
         opm.textContent = statement.opm.toFixed(2) + "%"
     }
-    show2A(){
-        revenue2.textContent = 100
-    }
+   
 }
 
 //starting class/object with figures given plus the first 3 outcome objects with figures given for each scenario
@@ -359,6 +358,12 @@ scenario1.addEventListener("submit", (e)=>{
         statementFour.show(statementFour)
         console.log(statementThree)
         console.log(statementFour)
+        localStorage.setItem("Q1Revenue", 100)
+        console.log(localStorage)
+        let q1rev = localStorage.getItem("Q1Revenue")
+        let revenue1 = document.getElementById("revenueNum1")
+        revenue1.innerText = q1rev
+
     })
 
     //Scenario 2 SUBMIT button event listener with if statements based on the answer selected.  Each block pushes the answer chosen to an array then displays income statement based on decision made 
