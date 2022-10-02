@@ -65,15 +65,31 @@
 </div>
 <div class="bottom">
 <form class="scenario1">
+
+<!-- Copy format of section below for remaining scenarios -->
+
     <fieldset>
-        <legend>Q1: Inventory shrinkage due to poor management.</legend>
-        <div class="options">
+
+    <legend>Q1: Inventory shrinkage due to poor management.</legend>
+    <div class="options">
+    
     <input type="radio" name="issue1" id="issue1A" value="1A" class="firstSet">
-    <label for="issue1A" class="firstSetA">Increase cycle count frequency</label>
+    <label for="issue1A" class="firstSetA" id="answer1A">Increase cycle count frequency</label>
+    
+        <p class="details1A">Increasing cycle counts will increase the labor hours for your warehouse staff, and possibly require additional staff.  This will result in a <span id="oneApSpan">15% increase to your indirect labor.</span></p>
+    
     <input type="radio" name="issue1" id="issue1B" value="1B" class="firstSet">
-    <label for="issue1B" class="firstSetA">Upgrade inventory management system</label>
+    <label for="issue1B" class="firstSetA" id="answer1B">Upgrade inventory management system</label>
+
+    <p class="details1B">Improving your inventory management requires new hardware and software throughout the company, which will result in a <span id="oneBpSpan">25% increase in office equipment costs.</span></p>
+
     <input type="radio" name="issue1" id="issue1C" value="1C" class="firstSet">
-    <label for="issue1C" class="firstSetA">Outsource inventory management</label>        
+    <label for="issue1C" class="firstSetA" id="answer1C">Outsource inventory management</label>  
+
+    <p class="details1C">Outsourcing your inventory management will <span id="oneCpSpan">increase your cost of storage by 50%.</span> However this also decreases the workload of your warehouse personnel, <span id="oneCpSpan">resulting in a 10% decrease to indirect labor.</span> 
+    
+    <!-- Copy format of section above for remaining scenarios -->
+
         </div>
         <div class="scenarioBtns">
             <button type="submit">Submit</button>

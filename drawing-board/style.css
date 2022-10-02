@@ -1,0 +1,47 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+.div1{
+    display: none;
+}
+
+.div2{
+    display: none;
+}
+
+.div3{
+    display: none;
+}
+
+fieldset{
+    margin: 1rem
+}
+
+.answers{
+    margin-top: 10px;
+}
+
+#answerOne:hover + .div1{
+    display: block;  
+    border: 1px solid black;
+    margin: .5rem;
+    padding: .25rem;  
+}
+
+#answerTwo:hover + .div2{
+    display: block; 
+    border: 1px solid black;
+    margin: .5rem;
+    padding: .25rem;   
+}
+
+#answerThree:hover + .div3{
+    display: block;  
+    border: 1px solid black;
+    margin: .5rem;
+    padding: .25rem;  
+}
+

@@ -6,14 +6,17 @@
 
 body{
     width: 100%;
-    height: auto;
+    height: 100%;
 }
+
+
 .menu{
     display: flex;
-    justify-content: space-evenly;
+    justify-content:center;
     list-style: none;
     margin-top: .5rem;
     font-weight: bold;
+    
 }
 
 .menu  a{
@@ -34,6 +37,7 @@ body{
     background-color: rgb(243, 240, 237);
     border-radius: 10px;
     box-shadow: .5rem .5rem .5rem black;
+    margin: 0 1rem 0 1rem;
 }
 
 .header{
@@ -70,7 +74,7 @@ body{
     height: 310px;
     margin-top: 8px;
     width: 500px;
-    margin:15px auto;
+    margin: 10px auto ;
     border-radius: 10px;
     box-shadow: .5rem .5rem .5rem black;
 ;
@@ -193,7 +197,7 @@ fieldset{
     flex-direction: column;
     list-style: none;
     width: 500px;
-    line-height: 2rem;
+    line-height: 1.5rem;
     box-shadow: .5rem .5rem .5rem black;
     margin-top: none;
 }
@@ -205,7 +209,7 @@ display: inline-block;
 
 .firstSet{
 float: left;
-margin-top: .65rem;
+margin-top: .4rem;
 margin-right: .25rem;
 margin-left: .5rem;
 
@@ -214,6 +218,57 @@ margin-left: .5rem;
     display: block;
 }
 
+/* Copy format of section below for remaining scenarios */
+
+.details1A{
+    display: none;
+}
+
+#oneApSpan{
+    font-weight: bold;
+}
+
+#answer1A:hover + .details1A{
+    display: block;
+    border: 1px solid black;
+    margin: .5rem;
+    padding: .25rem;
+    background-color: lightblue;
+}
+
+.details1B{
+    display: none;
+}
+
+#oneBpSpan{
+    font-weight: bold;
+}
+
+#answer1B:hover + .details1B{
+    display: block;
+    border: 1px solid black;
+    margin: .5rem;
+    padding: .25rem;
+    background-color: lightcoral;
+}
+
+.details1C{
+    display: none;
+}
+
+#oneCpSpan{
+    font-weight: bold;
+}
+
+#answer1C:hover + .details1C{
+    display: block;
+    border: 1px solid black;
+    margin: .5rem;
+    padding: .25rem;
+    background-color: lightblue;
+}
+
+/* Copy CSS format above for remaining scenarios */
 
 
 .scenario2{
