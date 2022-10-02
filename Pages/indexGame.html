@@ -76,7 +76,7 @@
     <input type="radio" name="issue1" id="issue1A" value="1A" class="firstSet">
     <label for="issue1A" class="firstSetA" id="answer1A">Increase cycle count frequency</label>
     
-        <p class="details1A">Increasing cycle counts will increase the labor hours for your warehouse staff, and possibly require additional staff.  This will result in a <span id="oneApSpan">15% increase to your indirect labor.</span></p>
+    <p class="details1A">Increasing cycle counts will increase the labor hours for your warehouse staff, and possibly require additional staff.  This will result in a <span id="oneApSpan">15% increase to your indirect labor.</span></p>
     
     <input type="radio" name="issue1" id="issue1B" value="1B" class="firstSet">
     <label for="issue1B" class="firstSetA" id="answer1B">Upgrade inventory management system</label>
@@ -100,16 +100,29 @@
 </form>
 
 <form class="scenario2">
+
     <fieldset>
-        <legend>Q2: Supplier increases cost of raw materials.</legend>
-        <div>
+
+    <legend>Q2: Supplier increases cost of raw materials.</legend>
+    <div>
+
     <input type="radio" name="issue2" id="issue2A" value="2A" class="firstSet">
-    <label for="issue2A" class="firstSetA">Find a new supplier</label>
+    <label for="issue2A" class="firstSetA" id="answer2A">Find a new supplier</label>
+
+    <p class="details2A">Finding a new supplier will eliminate the discounts established with your current supplier, resulting in a <span id="twoApSpan">25% increase in the cost of raw materials.</span> 
+    </p>
+
     <input type="radio" name="issue2" id="issue2B" value="2B" class="firstSet">
-    <label for="issue2B" class="firstSetA">Negotiate with supplier for new EOQ and release option</label>
+    <label for="issue2B" class="firstSetA" id="answer2B">Negotiate with supplier for new EOQ and release option</label>
+
+    <p class="details2B">Negotiating a new economic order quantity (EOQ) with your supplier will allow you to keep your current discount, but increases the required order quantity.  But you are also able to negotiate a release option with your supplier, and only receive the quantity needed based on your demand.  <span id="twoBpSpan">This reduces your storage costs by 10%.</span></p>
+
     <input type="radio" name="issue2" id="issue2C" value="2C" class="firstSet">
-    <label for="issue2C" class="firstSetA">Negotiate material costs to include freight</label>        
-        </div>
+    <label for="issue2C" class="firstSetA" id="answer2C">Negotiate material costs to include freight</label>     
+    
+    <p class="details2C">You are able to adjust your production schedule to meet your supplier's transportation schedule and negotiate delivery to be included with the cost of material.  <span id="twoCpSpan">This reduces your cost of freight by 10%.</span></p>
+    
+    </div>
         <div class="scenarioBtns">
             <button type="submit">Submit</button>
             <button type = "reset" id="clear2">Clear</button>
@@ -120,14 +133,25 @@
 
 <form class="scenario3">
     <fieldset>
-        <legend>Q3: Freight costs rise due to increase in fuel price.</legend>
-        <div>
+    
+    <legend>Q3: Freight costs rise due to increase in fuel price.</legend>
+    <div>
+
     <input type="radio" name="issue3" id="issue3A" value="3A" class="firstSet">
-    <label for="issue3A" class="firstSetA">Negotiate material costs to include freight</label>
+    <label for="issue3A" class="firstSetA" id="answer3A">Negotiate material costs to include freight</label>
+
+    <p class="details3A">Negotiating delivery to be covered by your supplier will <span id="threeApSpan">increase the cost of raw material by 30%, but your transportation costs will decrease by 75%.</span></p>
+
     <input type="radio" name="issue3" id="issue3B" value="3B" class="firstSet">
-    <label for="issue3B" class="firstSetA">Invest in company owned truck and driver</label>
+    <label for="issue3B" class="firstSetA" id="answer3B">Invest in company owned truck and driver</label>
+
+    <p class="details3B">The return on this investment may take a while.  In the mean time your <span id="threeBpSpan">equipment costs will increase by 20%, but your freight costs will decrease by 10%.</span></p>
+
     <input type="radio" name="issue3" id="issue3C" value="3C" class="firstSet">
-    <label for="issue3C" class="firstSetA">Hire someone to broker your freight</label>        
+    <label for="issue3C" class="firstSetA" id="answer3C">Hire someone to broker your freight</label>  
+    
+    <p class="details3C">Hiring someone to find the best freight deal for each delivery will <span id="threeCpSpan">reduce your freight costs by 5%, but it will also increase your indirect labor by 10%.</span></p>
+
         </div>
         <div class="scenarioBtns">
             <button type="submit">Submit</button>
@@ -139,15 +163,25 @@
 
 <form class="scenario4">
     <fieldset>
-        <legend>Q4: Employees' quality of work decrease, causing an increase in rework.</legend>
-        <div>
+    <legend>Q4: Employees' quality of work decrease, causing an increase in rework.</legend>
+    <div>
+
     <input type="radio" name="issue4" id="issue4A" value="4A" class="firstSet">
-    <label for="issue4A" class="firstSetA">Improve employee standard work/training</label>
+    <label for="issue4A" class="firstSetA" id="answer4A">Improve employee standard work/training</label>
+
+    <p class="details4A">Improving your training for employees reduces rework, resulting in a <span id="fourApSpan">decrease in factory labor by 10%.</span>  However the additional training provided by your supervisors and managers <span id="fourApSpan">increases the indirect labor by 5%.</span></p>
+
     <input type="radio" name="issue4" id="issue4B" value="4B" class="firstSet">
-    <label for="issue4B" class="firstSetA">Find higher skilled workers</label>
+    <label for="issue4B" class="firstSetA" id="answer4B">Find higher skilled workers</label>
+
+    <p class="details4B">Raising the hiring standard for factory employees reduces some of the rework, but hiring better qualified employees <span id="fourBpSpan">increases your factory labor costs by 5%.</span></p>
+
     <input type="radio" name="issue4" id="issue4C" value="4C" class="firstSet">
-    <label for="issue4C" class="firstSetA">Hire quality control personnel</label>        
-        </div>
+    <label for="issue4C" class="firstSetA" id="answer4C">Hire quality control personnel</label>  
+    
+    <p class="details4C">Developing a team around quality control helps with catching defects and implementing preventive measures.  This eliminates some rework and <span id="fourCpSpan">reduces factory labor costs by 10%;</span> however your <span id="fourCpSpan">indirect labor costs increase by 10%</span> because of the new quality control team.</p>
+
+    </div>
         <div class="scenarioBtns">
             <button type="submit">Submit</button>
             <button type = "reset" id="clear4">Clear</button>

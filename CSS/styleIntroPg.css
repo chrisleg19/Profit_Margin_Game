@@ -12,6 +12,7 @@ body{
     flex-direction: column;
     align-items: center;
     max-height: 100vh;
+    background-color: #FEFBF6;
 }
 .menu{
     display: flex;
@@ -64,6 +65,7 @@ li{
     justify-content: center;
     margin-top: .5rem;
     margin-bottom: .5rem;
+    text-align: center;
 }
 
 .refresherBox{
@@ -71,6 +73,7 @@ li{
     justify-content: center;
     margin-top: .5rem;
     margin-bottom: .5rem;
+    text-align: center;
 }
 
 .videoBox{
